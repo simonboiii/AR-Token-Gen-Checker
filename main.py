@@ -8,6 +8,9 @@ import threading
 from colorama import Fore
 from colorama import init
 
+trick = coded
+licensecode = input("Code to access this?: ")
+
 init(convert=True)
 
 style=f'{Fore.CYAN}[{Fore.RESET}${Fore.CYAN}]{Fore.RESET}'
@@ -23,7 +26,11 @@ def proxies():
     with open("proxies.txt", "w") as x:
         for proxy in rlist:
             proxylist.append(proxy)
-
+            
+coded = []
+coded.append('AKOJS-AOM6S-422DI')
+coded.append('ISJO2-BVAHK-DV5R8D')
+            
 def checker():
     while True:
         proxy=random.choice(proxylist)
@@ -59,6 +66,11 @@ def main():
     print()
     for i in range(int(threads)):
         threading.Thread(target=checker).start()
+        
+if trick in licensecode:
+    print("You may access the gen now")
+else:
+    exit()
 
 if __name__=='__main__':
     main()
